@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://brayf5yyy5eao"]
+
+[ext_resource type="Script" uid="uid://d0ee0d6bxcfje" path="res://scripts/main.gd" id="1_o5qli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1y4m"]
+bg_color = Color(0.43604532, 0.5689055, 1, 1)
+
+[node name="main" type="Node2D" unique_id=54214660]
+script = ExtResource("1_o5qli")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=939195742]
+
+[node name="restart_cat" type="Button" parent="." unique_id=1793880444]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 376.0
+offset_top = 516.0
+offset_right = 776.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Нажми на меня"
+
+[node name="Panel" type="Panel" parent="." unique_id=1230173903]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g1y4m")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=609116078]
+offset_left = 254.0
+offset_right = 899.0
+offset_bottom = 363.0
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="restart_cat" to="." method="_on_restart_cat_pressed"]
